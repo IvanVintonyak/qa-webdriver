@@ -5,8 +5,8 @@
     <test name="First test">
 
         <classes>
-<!--            <class name="ua.it.testing.FirstTest"/>-->
-<!--            <class name="ua.it.testing.RetryTest"/>-->
+<!--            <class name="ua.it.ui.TestOne"/>-->
+<!--            <class name="ua.it.ui.TestTwo"/>-->
         </classes>
     </test>
 </suite>
