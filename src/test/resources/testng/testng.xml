@@ -1,12 +1,12 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Smoke Test Suite" verbose="2">
+<suite name="Smoke Test Suite" verbose="2" thread-count="2">
     <test name="First test">
 
         <classes>
-<!--            <class name="ua.it.ui.TestOne"/>-->
-<!--            <class name="ua.it.ui.TestTwo"/>-->
+            <class name="ua.it.ui.TestRegister"/>
+            <class name="ua.it.ui.TestRegisterLogin"/>
         </classes>
     </test>
 </suite>

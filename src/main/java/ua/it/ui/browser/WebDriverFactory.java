@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ua.it.ui.utils.ConfigProvider;
 
+import java.time.Duration;
+
 import static ua.it.ui.utils.ConfigProvider.BROWSER;
 
 public class WebDriverFactory {
@@ -13,6 +15,7 @@ public class WebDriverFactory {
     private static WebDriver driver;
     public static WebDriver getDriver(){
         driver = getDriver(Browser.valueOf(ConfigProvider.BROWSER.toUpperCase()));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;
     }
     private static WebDriver getDriver(Browser browser) {
