@@ -4,13 +4,13 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    private String password;
+    private String userName;
 
-    public User(String firstName, String lastName, String email, String password) {
+    public User(String firstName, String lastName, String email, String userName) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.password = password;
+        this.userName = userName;
     }
 
     public static Builder builder() {
@@ -18,10 +18,11 @@ public class User {
     }
 
     public static class Builder {
+        private String userName;
         private String firstName;
         private String lastName;
         private String email;
-        private String password;
+
 
         public Builder setFirstName(String firstName) {
             this.firstName = firstName;
@@ -38,13 +39,13 @@ public class User {
             return this;
         }
 
-        public Builder setPassword(String password) {
-            this.password = password;
+        public Builder setUserName(String userName) {
+            this.userName = userName;
             return this;
         }
 
         public User build() {
-            return new User(firstName, lastName, email, password);
+            return new User(firstName, lastName, email, userName);
         }
     }
 }
