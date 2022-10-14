@@ -1,8 +1,6 @@
-package ua.it.ui.browser;
+package ua.it.ui.browser.singleton;
 
-import org.openqa.selenium.WebDriver;
-
-import java.util.Arrays;
+import ua.it.ui.browser.singleton.WebDriverProviderLazy;
 
 public class Main {
     public static void main(String[] args) {

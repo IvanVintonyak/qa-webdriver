@@ -1,4 +1,4 @@
-package ua.it.ui.element;
+package ua.it.ui.browser.element;
 
 import org.openqa.selenium.WebElement;
 
@@ -10,11 +10,12 @@ public class TextField {
         this.element = element;
     }
 
-public String getValue(){
+    public String getValue() {
         return element.getAttribute("value");
-}
- public void setValue(String value){
+    }
+
+    public void setValue(String value) {
         element.clear();
         element.sendKeys();
- }
+    }
 }

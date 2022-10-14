@@ -15,7 +15,7 @@ public class WebDriverFactory {
     private static WebDriver driver;
     public static WebDriver getDriver(){
         driver = getDriver(Browser.valueOf(ConfigProvider.BROWSER.toUpperCase()));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ConfigProvider.IMPLICITLY_WAIT));
         return driver;
     }
     private static WebDriver getDriver(Browser browser) {

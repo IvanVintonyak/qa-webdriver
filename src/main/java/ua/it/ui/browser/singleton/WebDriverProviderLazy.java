@@ -1,7 +1,4 @@
-package ua.it.ui.browser;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+package ua.it.ui.browser.singleton;
 
 public class WebDriverProviderLazy {
     private static  WebDriverProviderLazy instance;
