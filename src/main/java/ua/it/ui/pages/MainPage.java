@@ -45,8 +45,8 @@ public class MainPage extends Page {
         private By userName = By.id("register-username-modal");
         private By firstName = By.id("register-first-modal");
         private By lastName = By.id("register-last-modal");
-        private By email = By.id("email");
-        private By password = By.id("password");
+        private By email = By.id("register-email-modal");
+        private By password = By.id("register-password-modal");
         private By registerButton = By.cssSelector("#register-modal > div > div > div.modal-body > form > p > button");
 
         public void fillRegisterForm(User user) {
@@ -56,6 +56,7 @@ public class MainPage extends Page {
             driver.findElement(email).sendKeys(user.getEmail());
             driver.findElement(password).sendKeys(user.getPassword());
             driver.findElement(registerButton).click();
+            WaitUtils.waitElementToDisappear(driver, registerButton);
         }
 
         ;

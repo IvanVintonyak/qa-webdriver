@@ -50,24 +50,28 @@ public class User {
         private String email;
         private String password;
 
-        public Builder setUserName(String userName){
-            this.userName =userName;
+        public Builder setUserName(String userName) {
+            this.userName = userName;
             return this;
         }
-        public Builder setFirstName(String firstName){
-            this.firstName =firstName;
+
+        public Builder setFirstName(String firstName) {
+            this.firstName = firstName;
             return this;
         }
-        public Builder setLastName(String lastName){
-            this.lastName =lastName;
+
+        public Builder setLastName(String lastName) {
+            this.lastName = lastName;
             return this;
         }
-        public Builder setEmail(String email){
-            this.email =email;
+
+        public Builder setEmail(String email) {
+            this.email = email;
             return this;
         }
-        public Builder setPassword(String password){
-            this.password =password;
+
+        public Builder setPassword(String password) {
+            this.password = password;
             return this;
         }
 
