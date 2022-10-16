@@ -1,7 +1,6 @@
 package ua.it.ui.pages;
 
 import com.github.javafaker.Faker;
-import org.apache.commons.lang3.builder.Builder;
 
 public class User {
     private String userName;
@@ -75,15 +74,17 @@ public class User {
             return this;
         }
 
-    }
+        public User build() {
+            return new User(firstName, lastName, email, password, "");
+        }
 
-    public User build() {
-        return new User(firstName, lastName, email, password, "");
-    }
+        public User buildRandomUser() {
+            Faker faker = new Faker();
+            return new User(faker.name().username(), faker.name().firstName(), faker.name().lastName(), faker.internet()
+                    .emailAddress(), "pwd");
+        }
 
-    public User buildRandomUser() {
-        Faker faker = new Faker();
-
-        return new User(faker.name().username(), faker.name().firstName(), faker.name().lastName(), faker.internet().emailAddress(), "pwd");
     }
 }
+
+

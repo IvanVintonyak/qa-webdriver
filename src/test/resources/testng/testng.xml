@@ -1,12 +1,11 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Test Suite" verbose="2" thread-count="5">
+<suite name="Test Suite" verbose="2" thread-count="1" parallel="methods">
     <test name="First test">
 
         <classes>
-            <class name="ua.it.ui.TestRegister"/>
-            <class name="ua.it.ui.TestRegisterLogin"/>
+            <class name="ua.it.ui.PageObjectTest"/>
         </classes>
     </test>
 </suite>

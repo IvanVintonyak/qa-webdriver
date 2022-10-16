@@ -13,9 +13,8 @@ public class PageObjectTest extends BaseTest {
         mainPage.open();
 
         Assert.assertEquals(getWebDriver().getTitle(), mainPage.getTitle());
-
         MainPage.RegisterForm registerForm = mainPage.clickRegister();
-        registerForm.fillRegisterForm(User.builder().buildRandomUser);
+        registerForm.fillRegisterForm(User.builder().buildRandomUser());
 
 
         Assert.assertTrue(mainPage.isUserLoggedIn());

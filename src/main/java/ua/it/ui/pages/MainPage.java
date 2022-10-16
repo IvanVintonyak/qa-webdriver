@@ -2,15 +2,14 @@ package ua.it.ui.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import ua.it.ui.browser.element.TextField;
 import ua.it.ui.utils.ConfigProvider;
 import ua.it.ui.utils.WaitUtils;
 
 public class MainPage extends Page {
 
     public static final String TITLE = "WeaveSocks";
-    private By registerLink = By.xpath("//*[@id=\"register\"]/a");
-    private By logoutLink = By.id("logout");
+    private final By registerLink = By.xpath("//*[@id='register']/a");
+    private final By logoutLink = By.id("logout");
 
     public MainPage(WebDriver driver) {
         super(driver);

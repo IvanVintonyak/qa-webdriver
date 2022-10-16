@@ -30,7 +30,7 @@ public class TestRegisterLogin {
     public void test() {
         driver.get(ConfigProvider.BASE_URL);
         driver.findElement(By.cssSelector("#register > a")).click();
-        wait.until((visibilityOfElementLocated(By.id("register-modal"))));
+        //wait.until((visibilityOfElementLocated(By.id("register-modal"))));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.findElement(By.id("register-username-modal")).sendKeys("username" + randomString);
         driver.findElement(By.id("register-first-modal")).sendKeys("firstname" + randomString);

@@ -18,12 +18,12 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElem
 
 public class TestRegister {
     private WebDriver driver;
-    private WebDriverWait wait;
+   // private WebDriverWait wait;
 
     @BeforeTest
     public void start() {
-        driver = new WebDriverFactory().getDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        driver = WebDriverFactory.getDriver();
+        //wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
     }
@@ -32,7 +32,7 @@ public class TestRegister {
     public void test() {
         driver.get(ConfigProvider.BASE_URL);
         driver.findElement(By.cssSelector("#register > a")).click();
-        wait.until((visibilityOfElementLocated(By.id("register-modal"))));
+       // wait.until((visibilityOfElementLocated(By.id("register-modal"))));
         driver.findElement(By.id("register-username-modal")).sendKeys("username" +randomString);
         driver.findElement(By.id("register-first-modal")).sendKeys("firstname" + randomString);
         driver.findElement(By.id("register-last-modal")).sendKeys("lastname" + randomString);

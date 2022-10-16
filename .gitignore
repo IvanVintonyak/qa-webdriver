@@ -1,4 +1,6 @@
-/.idea/
+.idea
 *.iml
-/target/
-*BaseUITest
+/target
+/src/test/java/ua/it/ui/TestRegister.java
+/src/test/java/ua/it/ui/TestRegisterLogin.java
+
