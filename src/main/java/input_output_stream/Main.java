@@ -18,7 +18,7 @@ public class Main {
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
-        System.out.println("Last modified at : " + simpleDateFormat.format(test_data_yaml.lastModified()));
+        System.out.println("Last modified on : " + simpleDateFormat.format(test_data_yaml.lastModified()));
 
     }
 }
