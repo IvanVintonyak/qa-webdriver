@@ -7,12 +7,11 @@ import ua.it.ui.browser.WebDriverFactory;
 
 public class BaseTest {
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
-    // protected WebDriver driver;
 
 
     @BeforeMethod
     public void beforeTestMethod() {
-        WebDriver driver = WebDriverFactory.getDriver();
+        WebDriver driver = new WebDriverFactory().getDriver();
         setWebDriver(driver);
     }
 
@@ -21,11 +20,11 @@ public class BaseTest {
         getWebDriver().quit();
     }
 
-    private void setWebDriver(WebDriver driver) {
-        driverThreadLocal.set(driver);
-    }
-
     public WebDriver getWebDriver() {
         return driverThreadLocal.get();
+    }
+
+    private void setWebDriver(WebDriver driver) {
+        driverThreadLocal.set(driver);
     }
 }

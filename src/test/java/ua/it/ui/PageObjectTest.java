@@ -1,7 +1,6 @@
 package ua.it.ui;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import ua.it.ui.pages.MainPage;
 import ua.it.ui.pages.User;
@@ -20,8 +19,4 @@ public class PageObjectTest extends BaseTest {
         Assert.assertTrue(mainPage.isUserLoggedIn());
     }
 
-    @AfterTest
-    public void stop() {
-        getWebDriver().quit();
-    }
 }

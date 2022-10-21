@@ -4,7 +4,7 @@
 //import org.testng.Assert;
 //import org.testng.annotations.Test;
 //import ua.it.ui.browser.element.TextField;
-//import ua.it.ui.model.User;
+//import ua.it.ui.pages.User;
 //import ua.it.ui.utils.ConfigProvider;
 //
 //
@@ -12,15 +12,15 @@
 //    User user = User.builder()
 //            .setFirstName("firstName")
 //            .setLastName("lastName")
-//            . setEmail("email@yopmail.com")
+//            .setEmail("email@yopmail.com")
 //            .setUserName("userName")
 //            .build();
 //
-//    @Test
+//    @Test(enabled = true)
 //    public void test() {
 //
 //        getWebDriver().navigate().to(ConfigProvider.BASE_URL);
-//        TextField textField = new TextField( getWebDriver().findElement(By.name("q")));
+//        TextField textField = new TextField(getWebDriver().findElement(By.name("q")));
 //        textField.setValue("webdriver");
 //
 //
